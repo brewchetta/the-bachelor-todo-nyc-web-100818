@@ -30,11 +30,10 @@ def get_occupation(data, hometown)
   name = ""
   data.each do |season, v|
     v.each do |value|
-      if name = "" && value["hometown"] = hometown
-        name = value["name"]
-      end
+      name = value["name"] if name = "" && value["hometown"] = hometown
     end
-
+  end
+  name
 end
 
 def get_average_age_for_season(data, season)

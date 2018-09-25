@@ -27,10 +27,10 @@ def count_contestants_by_hometown(data, hometown)
 end
 
 def get_occupation(data, hometown)
-  name = ""
+  occupation = ""
   data.each do |season, v|
     v.each do |value|
-      name = value["name"] if name = "" && value["hometown"] = hometown
+      occupation = value["occupation"] if occupation = "" && value["hometown"] = hometown
     end
   end
   name

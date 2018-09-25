@@ -12,7 +12,7 @@ def get_contestant_name(data, occupation)
   name = ""
   data.each do |season,array|
     array.each do |value|
-      name = value["name"] if name == "" && value["occupation"] == occupation 
+      name = value["name"] if name == "" && value["occupation"] == occupation
     end
   end
   name
@@ -22,7 +22,7 @@ def count_contestants_by_hometown(data, hometown)
   i = 0
   data.each do |season,array|
     array.each do |value|
-      i += 1 if value["hometown"] = hometown
+      i += 1 if value["hometown"] == hometown
     end
   end
   i

@@ -1,3 +1,5 @@
+require 'pry'
+
 def get_first_name_of_season_winner(data, season)
   name = ""
   data[season].each do |contestant|
@@ -16,8 +18,10 @@ end
 def count_contestants_by_hometown(data, hometown)
   i = 0
   data.each do |season,v|
+    binding.pry
     v.each do
       i += 1 if v["hometown"] = hometown
+      binding.pry
     end
   end
 end

@@ -32,7 +32,7 @@ def get_occupation(data, hometown)
   occupation = ""
   data.each do |season, array|
     array.each do |value|
-      occupation = value["occupation"] if occupation = "" && value["hometown"] = hometown
+      occupation = value["occupation"] if occupation == "" && value["hometown"] == hometown
     end
   end
   occupation

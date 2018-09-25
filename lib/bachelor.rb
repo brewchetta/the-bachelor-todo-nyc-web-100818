@@ -30,7 +30,10 @@ def get_occupation(data, hometown)
   name = ""
   data.each do |season, v|
     v.each do |value|
-      if value["hometown"] = hometown && name = ""
+      if name = "" && value["hometown"] = hometown
+        name = value["name"]
+      end
+    end
 
 end
 

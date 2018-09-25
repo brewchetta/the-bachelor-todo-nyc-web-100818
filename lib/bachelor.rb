@@ -12,7 +12,7 @@ def get_contestant_name(data, occupation)
   name = ""
   data.each do |season,array|
     array.each do |value|
-      name = value["name"] if value["occupation"] = occupation && name == ""
+      name = value["name"] if name == "" && value["occupation"] = occupation 
     end
   end
   name
